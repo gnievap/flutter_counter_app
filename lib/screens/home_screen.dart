@@ -5,10 +5,19 @@ class HomeScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-   return const Scaffold(
-    backgroundColor: Colors.blue,
-     body:  Center(
-          child:Text('Home Screen'),
+   return  Scaffold(
+    appBar: AppBar(
+      title: const Text('HomeScreen'),
+      elevation: 10,
+    ),
+    backgroundColor: Colors.indigo,
+     body: const Center(
+            child:Column(
+                  children: [
+                    Text('Número de taps:'),
+                    Text('0'),
+                  ]
+            ),
         ),
    );
   }
