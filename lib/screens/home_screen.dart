@@ -1,26 +1,36 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
-  int counter = 0;
+  
   @override
   Widget build(BuildContext context) {
-    const TextStyle fontSize30 = TextStyle(fontSize: 30);
+    int counter = 0;
+    const TextStyle fontStyle = TextStyle(
+      fontSize: 30,
+      color: Colors.white);
     return Scaffold(
       appBar: AppBar(
         title: const Text('HomeScreen'),
         elevation: 10,
+        centerTitle: true,
       ),
       backgroundColor: Colors.indigo,
       body: Center(
-        child: Column(children: [
-          const Text(
-            'Número de taps:',
-            style: fontSize30,
-          ),
-          Text('$counter'),
-        ]),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Número de taps:',
+              style: fontStyle,
+            ),
+            Text(
+              '$counter',
+              style: fontStyle,
+            ),
+          ],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
