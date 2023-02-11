@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget{
      body: const Center(
             child:Column(
                   children: [
-                    Text('Número de taps:'),
+                    Text('Número de taps:',style: TextStyle(fontSize: 25)),
                     Text('0'),
                   ]
             ),
